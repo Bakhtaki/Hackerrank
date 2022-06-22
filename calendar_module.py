@@ -11,6 +11,9 @@
 # Constraints
 # 2000 <= yyyy <= 3000
 
+# input:
+# A single line of input containing the space separated values of day,
+
 # Output Format
 # Output the correct day in capital letters.
 
@@ -25,4 +28,13 @@
 # -----------------------------------------------------------------------------
 
 # Import the calendar module.
+import calendar
 
+# Read input
+month, day, year = map(int, input().split())
+
+# Define name of the day.
+day_name = calendar.day_name[calendar.weekday(year, month, day)]
+
+# Print the day name in Capital Letters
+print(day_name.upper())
