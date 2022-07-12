@@ -1,4 +1,4 @@
-"""Symmetric Diffrence of two sets"""
+"""Symmetric Difference of two sets"""
 
 # ---------------------------------------------------------------------
 # Task
