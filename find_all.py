@@ -32,14 +32,22 @@
 # ----------------------------------------------------------------
 import re
 
-s = input()
-pattern = (r'(?<=\w)([aeiouAEIOU]{2,})(?=\w)')
+# Read String from input
+S = input()
+found = []
 
-target = []
-target.extend(re.findall(pattern, s))
+vowels = 'aeiouAEIOU'
+consonants = 'qwrtypsdfghjklzxcvbnm'
 
-if len(target) == 0:
-    print(-1)
+# regex find substrings that contain 2 or more vowels in between 2 consonants
+p = r'(?<=[' + consonants + '])([' + vowels + ']{2,})(?=[' + consonants + '])'
+
+for match in re.finditer(p, S):
+    found.append(match.group(1))
+
+# Print output
+if len(found) > 0:
+    for f in found:
+        print(f)
 else:
-    for _ in target:
-        print(_, end='\n')
+    print(-1)
