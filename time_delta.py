@@ -26,17 +26,14 @@
 # Sample Output:
 # 25200
 # 88200
-#------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 
 # Imports
-import math
-import os 
-import random
-import re
-import sys
 import datetime
 
 # Complete the time_delta function below.
+
+
 def time_delta(t1, t2):
     """
     Calculate the time delta between two timestamps in seconds.
@@ -46,7 +43,6 @@ def time_delta(t1, t2):
     t2 = datetime.datetime.strptime(t2, '%a %d %b %Y %H:%M:%S %z')
 
     return (t1 - t2)
-
 
 
 if __name__ == '__main__':
@@ -61,7 +57,3 @@ if __name__ == '__main__':
         delta = time_delta(t1, t2)
         # print Delta with 1 Decimal Place
         print(round(delta.total_seconds(), 1))
-
-
-
-

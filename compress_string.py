@@ -35,12 +35,4 @@ for key, group in groupby(S):
     result.append((key, len(list(group))))
 
 for each in result:
-    print(each[0], int(each[1])), end=' ')
-
-# ---------------------------------------------------------------
-
-
-
-
-
-
+    print(each[0], int(each[1])), end = ' ')
