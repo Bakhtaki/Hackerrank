@@ -30,7 +30,7 @@ import xml.etree.ElementTree as etree
 
 def get_attr_number(node):
     # your code goes here
-    pass
+    return sum(len(child.attrib) for child in node.iter())
 
 
 if __name__ == '__main__':
