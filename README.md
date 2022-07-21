@@ -1,3 +1,3 @@
 # Hackerrank
-Hacker Rank Python
-Solution For Hacker Rank Preparation.
+Hacker Rank prepration Solutions for every Category.
+
