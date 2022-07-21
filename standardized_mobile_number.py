@@ -7,7 +7,7 @@
 # actual 10 digit number. alternatively,there may not be any prefix at all.
 #
 # Input Format:
-# the first of input contains an integer N,the number of mobile numbers.
+# the first line of input contains an integer N,the number of mobile numbers.
 # N lines follow,each containing a mobile number.
 #
 # Output Format:
@@ -24,3 +24,21 @@
 # +91 91959 69878
 # +91 98756 41230
 # -----------------------------------------------------------------------------
+# Solution:
+
+
+def wrapper(f):
+    def fun(ph):
+        # complete the function
+        f('+91 {} {}'.format(n[-10:-5], n[-5:]) for n in ph)
+    return fun
+
+
+@wrapper
+def sort_phone(ph):
+    print(*sorted(ph), sep='\n')
+
+
+if __name__ == '__main__':
+    ph = [input() for _ in range(int(input()))]
+    sort_phone(ph)
