@@ -1,4 +1,4 @@
-"""Try Cobmination with Replace"""
+"""Try Combination with Replace"""
 
 # -----------------------------------------------------------------------------
 # Your Task:
@@ -40,12 +40,5 @@ from itertools import combinations_with_replacement
 S, k = input().split()
 S = sorted(S)
 
-print(*[''.join(i) for i in combinations_with_replacement(S, int(k))], sep='\n')
-
-
-
-
-
-
-
-
+print(*[''.join(i) for i in combinations_with_replacement(S,
+                                                          int(k))], sep='\n')
