@@ -1,12 +1,6 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
-
-from regex import R
 
 #
 # Complete the 'climbingLeaderboard' function below.
@@ -20,7 +14,15 @@ from regex import R
 
 def climbingLeaderboard(ranked, player):
     # Write your code here
-    
+    scores_set = list(set(ranked))
+    scores_set.sort(reverse=True)
+    result = []
+    ll = len(scores_set)
+    for s in player:
+        while (ll > 0) and (s >= scores_set[ll-1]):
+            ll -= 1
+        result.append(ll+1)
+    return result
 
 
 if __name__ == '__main__':
