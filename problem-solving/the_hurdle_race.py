@@ -18,7 +18,11 @@ import sys
 
 def hurdleRace(k, height):
     # Write your code here
-    pass
+    max_height = max(height)
+    if max_height > k:
+        return max_height - k
+    else:
+        return 0
 
 
 if __name__ == '__main__':
