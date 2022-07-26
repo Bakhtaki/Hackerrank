@@ -12,7 +12,8 @@ import os
 
 def permutationEquation(p):
     # Write your code here
-    pass
+    dic = {p[i]: i+1 for i in range(len(p))}
+    return [dic[dic[i+1]] for i in range(len(p))]
 
 
 if __name__ == '__main__':
