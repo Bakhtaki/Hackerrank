@@ -1,16 +1,23 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
 
 # Complete the jumpingOnClouds function below.
 
 
 def jumpingOnClouds(c, k):
-    pass
+    energy = 100
+    lenght = len(c)
+    position = 0
+
+    while True:
+        position = (position + k) % lenght
+        energy -= 1
+        if c[position] == 1:
+            energy -= 2
+        if position == 0:
+            break
+    return energy
 
 
 if __name__ == '__main__':
