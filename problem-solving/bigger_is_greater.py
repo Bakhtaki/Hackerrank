@@ -1,11 +1,5 @@
 #!/bin/python3
-
-from cgitb import small
-import math
 import os
-import random
-import re
-import sys
 
 #
 # Complete the 'biggerIsGreater' function below.
