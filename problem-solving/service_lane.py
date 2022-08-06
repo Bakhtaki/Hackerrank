@@ -1,10 +1,6 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
 
 #
 # Complete the 'serviceLane' function below.
@@ -18,7 +14,12 @@ import sys
 
 def serviceLane(n, cases):
     # Write your code here
-    pass
+    widths = []
+
+    for i, j in cases:
+        widths.append(min(width[i:j+1]))
+
+    return widths
 
 
 if __name__ == '__main__':
