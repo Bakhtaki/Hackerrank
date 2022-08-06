@@ -1,10 +1,6 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
 
 
 #
@@ -19,7 +15,15 @@ import sys
 
 def workbook(n, k, arr):
     # Write your code here
-    pass
+    page, count = 0, 0
+    for c in arr:
+        page += 1
+        for i in range(1, c+1):
+            if i == page:
+                count += 1
+            if i % k == 0 and i < c:
+                page += 1
+    return count
 
 
 if __name__ == '__main__':
