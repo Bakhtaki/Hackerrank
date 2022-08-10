@@ -14,11 +14,24 @@ import sys
 #
 
 
-def larrysArray(A):
+def larrysArray(arr):
     # Write your code here
-    # return "YES" if can sort the array whit contains 3 consecutive numbers
-    # else return "NO"
-    pass
+    a = [x - 1 for x in arr]
+    swaps = 0
+    i = 0
+    while i < len(a)-1:
+        if a[i] == i:
+            i += 1
+            continue
+        tmp = a[i]
+        a[i] = a[tmp]
+        a[tmp] = tmp
+
+        swaps += 1
+    if swaps % 2 == 0:
+        return("YES")
+    else:
+        return("NO")
 
 
 if __name__ == '__main__':
