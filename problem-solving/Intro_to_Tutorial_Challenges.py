@@ -1,11 +1,6 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
-
 #
 # Complete the 'introTutorial' function below.
 #
@@ -17,8 +12,11 @@ import sys
 
 
 def introTutorial(V, arr):
-    # Write your code here
-    pass
+    """Write your code here."""
+    for i in range(len(arr)):
+        if arr[i] == V:
+            result = i
+    return result
 
 
 if __name__ == '__main__':
