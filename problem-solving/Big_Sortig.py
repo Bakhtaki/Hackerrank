@@ -16,7 +16,7 @@ import sys
 
 def bigSorting(unsorted):
     # Write your code here
-    pass
+    return sorted(unsorted, key=lambda x: int(x))
 
 
 if __name__ == '__main__':
