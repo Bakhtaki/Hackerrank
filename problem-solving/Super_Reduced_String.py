@@ -1,11 +1,6 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
-
 #
 # Complete the 'superReducedString' function below.
 #
@@ -16,7 +11,18 @@ import sys
 
 def superReducedString(s):
     # Write your code here
-    pass
+    ls = list(s)
+
+    while True:
+        for i in range(len(ls)):
+            if i + 1 < len(ls) and ls[i] == ls[i + 1]:
+                ls.pop(i)
+                ls.pop(i)
+                break
+        else:
+            break
+    return ''.join(ls) if ls else 'Empty String'
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
