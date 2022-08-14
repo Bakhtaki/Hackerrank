@@ -12,8 +12,19 @@ import os
 
 
 def minimumNumber(n, password):
-    # Return the minimum number of characters to make the password strong
-    pass
+    """ Return the minimum number of characters to make the password strong"""
+        special_characters = "!@#$%^&*()-+"
+        count = 0
+        if any(i.isdigit() for i in password) == False:
+            count += 1
+        if any(i.islower() for i in password) == False:
+            count +=1
+        if any(i.isupper() for i in password) == False:
+            count +=1
+        if any(i in special_characters for i in password) == False:
+            count += 1
+        return max(count, 6 - n)
+
 
 
 if __name__ == '__main__':
