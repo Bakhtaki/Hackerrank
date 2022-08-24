@@ -5,6 +5,7 @@ import os
 
 # Complete the flatlandSpaceStations function below.
 def flatlandSpaceStations(n, c):
+    """Write Your Code Here."""
     c = sorted(c)
     res = c[0]
 
