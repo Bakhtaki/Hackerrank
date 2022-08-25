@@ -9,7 +9,7 @@ import os
 
 def runningTime(arr):
 
-    # Write your code here
+    """Write your code here."""
     n = len(arr)
     result = 0
 
