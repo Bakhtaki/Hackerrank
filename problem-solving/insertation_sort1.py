@@ -1,9 +1,3 @@
-mport math
-import os
-import random
-import re
-import sys
-
 #
 # Complete the 'insertionSort1' function below.
 #
