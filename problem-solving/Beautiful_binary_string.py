@@ -1,10 +1,6 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
 
 #
 # Complete the 'beautifulBinaryString' function below.
@@ -15,8 +11,8 @@ import sys
 
 def beautifulBinaryString(b):
     # Write your code here
-    pass
-    
+    return b.count("010")
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
