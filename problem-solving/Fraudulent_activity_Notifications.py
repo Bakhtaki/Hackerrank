@@ -1,12 +1,7 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
 from bisect import bisect_left, insort
-from statistics import median
 #
 # Complete the 'activityNotifications' function below.
 #
@@ -15,20 +10,25 @@ from statistics import median
 #  1. INTEGER_ARRAY expenditure
 #  2. INTEGER d
 #
+def my_med(arr,m,d):
+    if d % 2 == 0:
+        return sum(arr[m-1:m+1]) /2
+    else:
+        return arr[m]
+
 
 def activityNotifications(expenditure, d):
     # Write your code here
     count = 0
     ex_len = len(expenditure)
     tr = sorted(expenditure[0:d])
+    m = d // 2
 
     for i in range(d,ex_len):
-        if expenditure[i] >= 2 * median(tr):
+        if expenditure[i] >= 2 * my_med(tr, m, d):
             count += 1
-        tr.remove(expenditure[d - i])
+        del tr[bisect_left(tr,expenditure[i-d])]
         insort(tr,expenditure[i])
-
-
     return count
 
 
