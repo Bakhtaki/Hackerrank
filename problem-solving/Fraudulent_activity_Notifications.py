@@ -10,9 +10,9 @@ from bisect import bisect_left, insort
 #  1. INTEGER_ARRAY expenditure
 #  2. INTEGER d
 #
-def my_med(arr,m,d):
+def my_med(arr, m, d):
     if d % 2 == 0:
-        return sum(arr[m-1:m+1]) /2
+        return sum(arr[m-1:m+1]) / 2
     else:
         return arr[m]
 
@@ -24,11 +24,11 @@ def activityNotifications(expenditure, d):
     tr = sorted(expenditure[0:d])
     m = d // 2
 
-    for i in range(d,ex_len):
+    for i in range(d, ex_len):
         if expenditure[i] >= 2 * my_med(tr, m, d):
             count += 1
-        del tr[bisect_left(tr,expenditure[i-d])]
-        insort(tr,expenditure[i])
+        del tr[bisect_left(tr, expenditure[i-d])]
+        insort(tr, expenditure[i])
     return count
 
 
