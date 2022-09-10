@@ -1,11 +1,6 @@
 #!/bin/python3
 
-import math
 import os
-import random
-import re
-import sys
-
 #
 # Complete the 'makingAnagrams' function below.
 #
@@ -14,6 +9,7 @@ import sys
 #  1. STRING s1
 #  2. STRING s2
 #
+
 
 def makingAnagrams(s1, s2):
     # Write your code here
@@ -25,7 +21,6 @@ def makingAnagrams(s1, s2):
         else:
             count += 1
     return len(s2) + count
-
 
 
 if __name__ == '__main__':
