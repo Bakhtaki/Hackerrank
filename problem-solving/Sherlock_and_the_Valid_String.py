@@ -1,7 +1,7 @@
 #!/bin/python3
 
 import os
-
+from collections import Counter
 #
 # Complete the 'isValid' function below.
 #
@@ -12,14 +12,17 @@ import os
 
 def isValid(s):
     # Write your code here
-    counts = {}
-
-    for each in s:
-        if each in counts:
-            counts[each] += 1
+    res = list(Counter(list(Counter(s).values())).values())
+    if len(res) == 1:
+        return "YES"
+    if len(res) > 2:
+        return "NO"
+    if len(res) == 2:
+        c = res.pop()
+        if c > 1:
+            return "NO"
         else:
-            counts[each] = 1
-    return 1
+            return "YES"
 
 
 if __name__ == '__main__':
