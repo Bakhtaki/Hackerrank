@@ -8,11 +8,22 @@ import os
 #  1. STRING a
 #  2. STRING b
 #
+def morgan(a,b):
+    a += 'z'
+    b += 'z'
+
+    for _ in range(len(a)+len(b)-2):
+        if a < b:
+            yield a[0]
+            a = a[1:]
+        else:
+            yield b[0]
+            b = b[1:]
 
 
 def morganAndString(a, b):
-    """Write your code here."""
-    pass
+    # Write your code here
+    return ''.join(morgan(a, b))
 
 
 if __name__ == '__main__':
