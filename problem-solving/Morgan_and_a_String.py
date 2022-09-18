@@ -8,7 +8,9 @@ import os
 #  1. STRING a
 #  2. STRING b
 #
-def morgan(a,b):
+
+
+def morgan(a, b):
     a += 'z'
     b += 'z'
 
