@@ -1,9 +1,15 @@
 {
     "cSpell.words": [
+        "centerresult",
+        "ecicenter",
+        "ecitotal",
         "fracs",
         "Gridland",
         "hmap",
-        "hrange"
+        "hrange",
+        "ociinner",
+        "ocitotal",
+        "resi"
     ],
     "python.linting.flake8Enabled": true,
     "python.linting.enabled": true
