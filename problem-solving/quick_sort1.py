@@ -6,6 +6,8 @@ import os
 # The function is expected to return an INTEGER_ARRAY.
 # The function accepts INTEGER_ARRAY arr as parameter.
 #
+
+
 def quickSort(arr):
     """Write your code here."""
     equal = []
