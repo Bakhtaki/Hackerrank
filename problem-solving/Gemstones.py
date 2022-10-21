@@ -12,10 +12,10 @@ import os
 
 def gemstones(arr):
     # Write your code here
-    
+
     minerals = {}
     count = 0
-    
+
     for element in arr:
         element = list(set(element))
         for each in element:
@@ -23,11 +23,10 @@ def gemstones(arr):
                 minerals[each] += 1
             else:
                 minerals[each] = 1
-    for _,value in minerals.items():
+    for _, value in minerals.items():
         if value == len(arr):
             count += 1
     return count
-
 
 
 if __name__ == '__main__':
