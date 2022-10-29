@@ -1,14 +1,18 @@
 {
     "cSpell.words": [
         "centerresult",
+        "chunkvals",
         "ecicenter",
         "ecitotal",
         "fracs",
+        "getbest",
+        "getkey",
         "Gridland",
         "hmap",
         "hrange",
         "ociinner",
         "ocitotal",
+        "recordvalue",
         "resi"
     ],
     "python.linting.flake8Enabled": true,
