@@ -29,19 +29,19 @@ def printShortestPath(n, i_start, j_start, i_end, j_end):
         step_counter += 1
         stack_size = len(stack)
         while stack_size > 0:
-            stack_size -= 1 # Decrement stack size
-            x, y, path = stack.pop(0) # Pop from stack
+            stack_size -= 1  # Decrement stack size
+            x, y, path = stack.pop(0)  # Pop from stack
             for direction, dx, dy in directions:
-                new_x, new_y = x + dx, y + dy # Get new coordinates
+                new_x, new_y = x + dx, y + dy  # Get new coordinates
                 if (new_x, new_y) == end:
-                    print(step_counter) # Print step counter
-                    path += " " + direction # Add direction to path
-                    print(path[:1]) # Remove first space
+                    print(step_counter)  # Print step counter
+                    path += " " + direction  # Add direction to path
+                    print(path[:1])  # Remove first space
                     return
                 if 0 <= new_x < n and 0 <= new_y < n and \
                         (new_x, new_y) not in visited:
                     stack.append((new_x, new_y, path + ' ' + direction))
-                    visited.add((new_x, new_y)) # Add to visited
+                    visited.add((new_x, new_y))  # Add to visited
     print('Impossible')
 
 
