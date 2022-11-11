@@ -87,15 +87,12 @@ def main():
     G = dict([(biker, neighbors[biker]) for biker in bikers])
     (matching, A, B) = bipartiteMatch(G)
     matching_pairs = set([(bike, matching[bike]) for bike in matching])
-    # print "len(matching) = " + str(len(matching))
 
     for (dist, biker, bike) in edges:
-        # (dist, biker, bike) = edges[i]
         biker_hits[biker] += 1
         bike_hits[bike] += 1
         neighbors[biker].remove(bike)
 
-        # if len(matching) >= K:
         if (bike, biker) in matching_pairs:
             G = dict([(biker, neighbors[biker]) for biker in bikers])
             (matching, A, B) = bipartiteMatch(G)

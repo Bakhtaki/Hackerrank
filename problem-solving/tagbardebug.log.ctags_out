@@ -1,0 +1,8 @@
+ctags: Warning: Unsupported parameter 'e' for "fields" option
+  Option: --language-force=python
+  Option: --python-kinds=icfmv
+Reading command line arguments
+OPENING /var/folders/kc/k9p257md2kn6_z_747_ppptw0000gn/T/vSBmbjO/11.py as Python language file
+bipartiteMatch	/var/folders/kc/k9p257md2kn6_z_747_ppptw0000gn/T/vSBmbjO/11.py	/^def bipartiteMatch(graph):$/;"	f	line:2	access:public
+recurse	/var/folders/kc/k9p257md2kn6_z_747_ppptw0000gn/T/vSBmbjO/11.py	/^        def recurse(v):$/;"	f	line:43	function:bipartiteMatch	access:public
+main	/var/folders/kc/k9p257md2kn6_z_747_ppptw0000gn/T/vSBmbjO/11.py	/^def main():$/;"	f	line:60	access:public
