@@ -1,7 +1,4 @@
-#!/bin/python3
-#
-# Complete the 'printShortestPath' function below.
-#
+
 # The function accepts following parameters:
 #  1. INTEGER n
 #  2. INTEGER i_start
@@ -11,34 +8,41 @@
 #
 
 def printShortestPath(n, i_start, j_start, i_end, j_end):
-    # Print the distance along with the sequence of moves.
-
-    # Start point
-    start = (i_start, j_start)
-    # End point
+    # Write your code here
+    # Destination
     end = (i_end, j_end)
-
-    # Create a queue for BFS
-    queue = [(start, [])]
-
-    # Mark the squares visited
+    # Visited
     visited = set()
+    # Add start to visited
+    visited.add((i_start, j_start))
+    # stack
+    stack = [(i_start, j_start, '')]
+    # Step Counter
+    step_counter = 0
+    # Directions
+    directions = [('UL', -2, -1), ('UR', -2, 1),
+                  ('R', 0, 2), ('LR', 2, 1),
+                  ('LL', 2, -1), ('L', 0, -2)]
 
-    # Loop until the queue is empty
-    while queue:
-        next_move = []
-        for (x, y), path in queue:
-            if (x, y) == end:
-                print(len(path))
-                print(' '.join(path))
-                return
-            for i, j, direction in [(-2, -1, 'UL'), (-2, 1, 'UR'),
-                                    (-1, -2, 'L'), (-1, 2, 'R'),
-                                    (1, -2, 'L'), (1, 2, 'R'),
-                                    (2, -1, 'UL'), (2, 1, 'UR')]:
-                if 0 <= x+i < n and 0 <= y+j < n and (x+i, y+j) not in visited:
-                    next_move.append(((x+i, y+j), path + [direction]))
-                    visited.add((x+i, y+j))
+    # While stack is not empty and end is not in visited
+    while stack:
+        step_counter += 1
+        stack_size = len(stack)
+        while stack_size > 0:
+            stack_size -= 1 # Decrement stack size
+            x, y, path = stack.pop(0) # Pop from stack
+            for direction, dx, dy in directions:
+                new_x, new_y = x + dx, y + dy # Get new coordinates
+                if (new_x, new_y) == end:
+                    print(step_counter) # Print step counter
+                    path += " " + direction # Add direction to path
+                    print(path[:1]) # Remove first space
+                    return
+                if 0 <= new_x < n and 0 <= new_y < n and \
+                        (new_x, new_y) not in visited:
+                    stack.append((new_x, new_y, path + ' ' + direction))
+                    visited.add((new_x, new_y)) # Add to visited
+    print('Impossible')
 
 
 if __name__ == '__main__':
