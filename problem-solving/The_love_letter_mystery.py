@@ -9,6 +9,7 @@ import os
 # The function accepts STRING s as parameter.
 #
 
+
 def theLoveLetterMystery(s):
     # Write your code here
     L = len(s)
@@ -16,7 +17,7 @@ def theLoveLetterMystery(s):
     if L % 2 == 0:
         l, r = L//2-1, L//2-1
         r = L//2
-    count = 0 
+    count = 0
     while l >= 0 and r <= L - 1:
         count += abs(ord(s[l]) - ord(s[r]))
         l -= 1
@@ -37,4 +38,3 @@ if __name__ == '__main__':
         fptr.write(str(result) + '\n')
 
     fptr.close()
-
